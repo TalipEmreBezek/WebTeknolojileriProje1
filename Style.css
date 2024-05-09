@@ -5,3 +5,19 @@ background-color: aqua;
 color:rgb(0, 0, 0);
 text-align: center;
 }
+.baslikh1
+{
+    font: 60px italic;
+    background-color: chartreuse;
+    text-align: center;
+}
+.body1
+{
+    background-color: chartreuse;
+}
+.pbir
+{
+    font-size: larger;
+    color: brown;
+    text-align: center;
+}
