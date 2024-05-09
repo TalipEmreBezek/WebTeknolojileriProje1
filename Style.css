@@ -5,19 +5,36 @@ background-color: aqua;
 color:rgb(0, 0, 0);
 text-align: center;
 }
-.baslikh1
-{
-    font: 60px italic;
-    background-color: chartreuse;
-    text-align: center;
-}
+
 .body1
 {
     background-color: chartreuse;
+}
+.body2
+{
+    background-color: burlywood;
 }
 .pbir
 {
     font-size: larger;
     color: brown;
+    text-align: center;
+}
+.piki
+{
+font-size: larger;
+color: rgb(0, 0, 0);
+text-align: center;
+}
+.baslikh1
+{
+    font: 60px italic;
+    background-color: rgb(6, 170, 185);
+    text-align: center;
+}
+.baslikh2
+{
+    font: 50px italic;
+    background-color: rgb(205, 202, 202);
     text-align: center;
 }
