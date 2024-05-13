@@ -1,40 +1,42 @@
-.menubar
-{
-font: 40px bold;
-background-color: aqua;
-color:rgb(0, 0, 0);
-text-align: center;
-}
+nav {
+    background-color: #161f08;
+    padding: 25px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav li {
+    
+    display: inline-block;
+    margin: 0 30px;
+  }
+  
+  nav a {
+    color: #f4f4f4;
+    text-decoration:none;
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+  
+  nav a:hover {
+    background-color: #bcc72e;
+  }
 
-.body1
-{
-    background-color: chartreuse;
-}
-.body2
-{
-    background-color: burlywood;
-}
-.pbir
-{
-    font-size: larger;
-    color: brown;
+  h1{
     text-align: center;
-}
-.piki
-{
-font-size: larger;
-color: rgb(0, 0, 0);
-text-align: center;
-}
-.baslikh1
-{
-    font: 60px italic;
-    background-color: rgb(6, 170, 185);
+    padding:1%;
+  }
+  h2{
     text-align: center;
-}
-.baslikh2
-{
-    font: 50px italic;
-    background-color: rgb(205, 202, 202);
+    padding: 1%;
+  }
+  p{
     text-align: center;
-}
+    padding: 1%;
+  }
+  
