@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="Style.css" type="text/css" rel="Stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body>
@@ -18,6 +19,37 @@
               <li><a href="Login.html">Giriş Yap</a></li>
             </ul>
           </nav>
+
+          <div class="container mt-5">
+            <h1>Login</h1>
+            <form action="Login.php" method="post" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="email" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Giriş</button>
+            </form>
+        </div>
+        <script>
+            function validateForm() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if (username == "" || password == "") {
+                    alert("Kullanıcı adı ve şifre boş bırakılamaz");
+                    return false;
+                }
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailPattern.test(username)) {
+                    alert("Geçerli bir e-posta adresi giriniz");
+                    return false;
+                }
+                return true;
+            }
+        </script>
 
     </body>
 </html>
