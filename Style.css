@@ -35,8 +35,24 @@ nav {
     text-align: center;
     padding: 1%;
   }
+  
   p{
     text-align: center;
     padding: 1%;
+  }
+  .pbir{
+    text-align: left;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  } 
+  .education-item {
+    margin-bottom: 20px;
   }
   

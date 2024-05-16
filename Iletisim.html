@@ -22,7 +22,7 @@
           </nav>
           <div class="container mt-5">
             <h1>İletişim</h1>
-            <form onsubmit="return validateContactForm()">
+            <form onsubmit="return degerDogrulama()">
                 <div class="form-group">
                     <label for="name">Ad Soyad</label>
                     <input type="text" class="form-control" id="name" required>
@@ -36,11 +36,11 @@
                     <textarea class="form-control" id="message" rows="3" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Gönder</button>
-                <button type="button" class="btn btn-secondary" onclick="clearForm()">Temizle</button>
+                <button type="button" class="btn btn-secondary" onclick="temizle()">Temizle</button>
             </form>
         </div>
         <script>
-            function validateContactForm() {
+            function degerDogrulama() {
                 var name = document.getElementById("name").value;
                 var email = document.getElementById("email").value;
                 var message = document.getElementById("message").value;
@@ -55,7 +55,7 @@
                 }
                 return true;
             }
-            function clearForm() {
+            function temizle() {
                 document.getElementById("name").value = "";
                 document.getElementById("email").value = "";
                 document.getElementById("message").value = "";
