@@ -55,4 +55,9 @@ nav {
   .education-item {
     margin-bottom: 20px;
   }
+  .carousel-item img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
   
