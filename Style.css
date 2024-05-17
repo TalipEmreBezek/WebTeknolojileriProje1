@@ -10,6 +10,21 @@ nav {
     text-align: center;
   }
   
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+.nav-link {
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+}
+.nav-item {
+    display: flex;
+}
+
   nav li {
     
     display: inline-block;
@@ -60,4 +75,7 @@ nav {
     height: auto; 
     object-fit: cover;
 }
-  
+.img-fluid {
+  cursor: pointer;
+}
+
