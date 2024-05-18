@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talip Emre Bezek - Web Sitesi</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="Style.css" type="text/css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -28,5 +29,50 @@
         </div>
     </nav>
 
+    <div class="container mt-5">
+        <h1>Son Haberler</h1>
+        <div id="news-container"></div>
+    </div>
+
+    <script>
+        const apiKey = 'pub_44430553d04201f5c945ba42d12a45d4e65fe'; 
+        const newsContainer = document.getElementById('news-container');
+
+        fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&country=tr`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Belirtilen kaynaktan veri çekilemedi');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                displayNews(data.results);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+
+        function displayNews(articles) {
+            articles.forEach(article => {
+                const newsItem = document.createElement('div');
+                newsItem.className = 'news-item';
+                newsItem.innerHTML = `
+                    <h3>${article.title}</h3>
+                    <p>${article.description}</p>
+                    <a href="${article.link}" target="_blank">Haberin Devamı</a>
+                `;
+                newsContainer.appendChild(newsItem);
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
