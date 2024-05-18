@@ -34,7 +34,7 @@ if ($username == "b231210052@sakarya.edu.tr" && $password == "b231210052") {
 
         <script>
             setTimeout(function() {
-                window.location.href = 'Hakkinda.html';
+                window.location.href = 'index.html';
             }, 3000); 
         </script>
 
